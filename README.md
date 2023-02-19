@@ -1,6 +1,7 @@
-# Curso JavaScript - Coderhouse - Comisión 51475 - Joel Basualdo
+# Curso JavaScript - Coderhouse
+### Comisión 51475 - Joel Basualdo
 
-## Simulador interactivo
+## - Simulador interactivo
 
 ![image](https://raw.githubusercontent.com/JoelJBG/Js---Funciones---Primer-entrega/main/img/Simulador.png
 )
