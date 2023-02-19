@@ -15,7 +15,7 @@ function calcularPrecioTotal() {
   } else if (tipo.toLowerCase() === "sunscreen") {
     precioPorMetroCuadrado = 9600;
   } else {
-    document.getElementById("resultado").innerHTML = "Tipo de cortina inválido. Por favor, seleccione Black out o Sun screen.";
+    document.getElementById("resultado1").innerHTML = "Tipo de cortina inválido. Por favor, seleccione Black out o Sun screen.";
     return;
   }
 
@@ -28,19 +28,20 @@ function calcularPrecioTotal() {
   if (metodoPago.toLowerCase() === "efectivo") {
     descuento = precioTotal * 0.1;
     precioTotal = precioTotal - descuento;
-    document.getElementById("resultado").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2) + "<br>DESCUENTO: $" + descuento.toFixed(2);
+    document.getElementById("resultado1").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2) + "<br>DESCUENTO: $" + descuento.toFixed(2);
   } else if (metodoPago === "1" || metodoPago === "3") {
     descuento = 0;
-    document.getElementById("resultado").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2);
+    document.getElementById("resultado1").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2);
   } else if (metodoPago === "6") {
     interes = precioTotal * 0.15;
     precioTotal = precioTotal + interes;
-    document.getElementById("resultado").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2) + "<br>Intereses: $" + interes.toFixed(2);
+    document.getElementById("resultado1").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2) + "<br>Intereses: $" + interes.toFixed(2);
   } else if (metodoPago === "12") {
     interes = precioTotal * 0.28;
     precioTotal = precioTotal + interes;
-    document.getElementById("resultado").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2) + "<br>Intereses: $" + interes.toFixed(2);
+    document.getElementById("resultado1").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2) + "<br>Intereses: $" + interes.toFixed(2);
   } else {
-    document.getElementById("resultado").innerHTML = "Método de pago inválido. Por favor, seleccione Efectivo, 1, 3, 6 o 12 cuotas.";
+    document.getElementById("resultado1").innerHTML = "Método de pago inválido. Por favor, seleccione Efectivo, 1, 3, 6 o 12 cuotas.";
   }
+  document.getElementById("resultado1").style.display = "block";
 }

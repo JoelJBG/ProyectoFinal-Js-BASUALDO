@@ -46,17 +46,23 @@ label {
 .resultado {
     max-width: 80%;
     margin-top: 20px;
+    margin-bottom: 50px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 5px;
     text-align: center;
     font-size: 24px;
+    
 
 }
 
+.resultado {
+    display: none;
+}
+
 .textofooter {
-    position: fixed;
+    margin-top: 20px;
     text-align: center;
     bottom: 0;
     width: 100%;
