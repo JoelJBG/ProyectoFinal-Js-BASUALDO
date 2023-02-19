@@ -7,7 +7,7 @@
 
 ---
 
-### Descripción
+### **Descripción**
 
   Se trata de un programa que calcula el precio final de una cortina roller segun:
   
