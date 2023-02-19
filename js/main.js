@@ -1,5 +1,4 @@
 function calcularPrecioTotal() {
-  // Definimos las variables necesarias
   var ancho = parseFloat(document.getElementById("ancho").value);
   var alto = parseFloat(document.getElementById("alto").value);
   var tipo = document.getElementById("tipo").value;
@@ -10,7 +9,7 @@ function calcularPrecioTotal() {
   var cuotas = 0;
   var interes = 0;
 
-  // Calculamos el precio por metro cuadrado según el tipo de cortina
+  // Tipo de cortina
   if (tipo.toLowerCase() === "blackout") {
     precioPorMetroCuadrado = 8700;
   } else if (tipo.toLowerCase() === "sunscreen") {
@@ -20,13 +19,11 @@ function calcularPrecioTotal() {
     return;
   }
 
-  // Calculamos la cantidad de metros cuadrados
   metrosCuadrados = (alto / 100) * (ancho / 100);
 
-  // Calculamos el precio total
   precioTotal = metrosCuadrados * precioPorMetroCuadrado;
 
-  // Calculamos el descuento o interés según el método de pago
+  // Método de pago
   var metodoPago = document.getElementById("metodoPago").value;
   if (metodoPago.toLowerCase() === "efectivo") {
     descuento = precioTotal * 0.1;

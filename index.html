@@ -17,15 +17,22 @@
 	<form>
 		<label for="alto">Alto de la cortina (en centímetros):</label>
 		<input  class="color1" type="number" id="alto" name="alto" required><br><br>
+		
 		<label  for="ancho">Ancho de la cortina (en centímetros):</label>
 		<input  class="color1" type="number" id="ancho" name="ancho" required><br><br>
+		
 		<label for="tipo">Tipo de cortina:</label>
+		
 		<select  class="color1" id="tipo" name="tipo" required>
 			<option value="">Seleccione una opción</option>
 			<option value="blackout">Black out</option>
 			<option value="sunscreen">Sun screen</option>
-		</select><br><br>
+		</select>
+		
+		<br><br>
+		
 		<label for="metodoPago">Método de pago:</label>
+		
 		<select class="color1" id="metodoPago" name="metodoPago" required>
 			<option value="">Seleccione una opción</option>
 			<option value="efectivo">Efectivo (10% de descuento)</option>
@@ -34,9 +41,16 @@
 			<option value="6">6 cuotas (15% de interés)</option>
 			<option value="12">12 cuotas (28% de interés)</option>
 		</select><br><br>
+		
 		<input  class="color1" type="button" value="Calcular" onclick="calcularPrecioTotal()">
+	
 	</form>
+	
 	<div class="resultado" id="resultado"></div>
+
+	<footer>
+	<p class="textofooter">Coderhouse - Curso Javascript - Comisión 51475 - Joel Basualdo </p>
+	</footer>
 
 
 	<script src="/js/main.js"></script>
