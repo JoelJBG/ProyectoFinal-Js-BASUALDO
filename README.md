@@ -2,9 +2,9 @@
 ## Comisión 51475 - Joel Basualdo
 ### - Simulador interactivo
 
-![image]([https://raw.githubusercontent.com/JoelJBG/Js---Funciones---Primer-entrega/main/img/Simulador.png](https://raw.githubusercontent.com/JoelJBG/Js---2daPreEntrega/main/img/Segunda%20Entrega.jpg)
-![image]([[https://raw.githubusercontent.com/JoelJBG/Js---Funciones---Primer-entrega/main/img/Simulador.png](https://raw.githubusercontent.com/JoelJBG/Js---2daPreEntrega/main/img/Segunda%20Entrega.jpg](https://raw.githubusercontent.com/JoelJBG/Js---2daPreEntrega/main/img/Segunda%20Entrega2.jpg))
-![image]([[https://raw.githubusercontent.com/JoelJBG/Js---Funciones---Primer-entrega/main/img/Simulador.png](https://raw.githubusercontent.com/JoelJBG/Js---2daPreEntrega/main/img/Segunda%20Entrega.jpg](https://raw.githubusercontent.com/JoelJBG/Js---2daPreEntrega/main/img/Segunda%20Entrega3.jpg))
+![image](https://github.com/JoelJBG/Js---2daPreEntrega/blob/main/img/Segunda%20Entrega.jpg?raw=true)
+
+
 
 ---
 
