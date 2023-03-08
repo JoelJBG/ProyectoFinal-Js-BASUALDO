@@ -19,10 +19,9 @@
             }
           ];
 
-            // Ordenar los productos por nombre
+
             rollers.sort((a, b) => a.nombre.localeCompare(b.nombre));
 
-            // Crear un mensaje con los datos de cada producto
             let mensaje = '';
             
             for (let i = 0; i < rollers.length; i++) {
@@ -30,15 +29,13 @@
               mensaje += `${rollers[i].nombre}: $ ${rollers[i].precio} x m2, Stock: ${rollers[i].stock ? 'Sí' : 'No'}\n`;
             }
 
-            // Mostrar el mensaje en un alert
+
             alert("Bienvenido RollersJs !! \nAquí te mostramos los productos que vendemos en nuestra tienda. \nUsted podra calcular su costo segun sus medidas y el metodo de pago \n \nCortinas Rollers:\n" + mensaje);
 
-//CON SU ID - TIPO - PRECIO - SI HAY STOCK
 
 
 // REGISTRAR CLIENTE EN UN ARRAY
 
-// Definir el array de clientes
 const clientes = [
   {
     nombre: "Joel",
@@ -47,12 +44,9 @@ const clientes = [
   }
 ];
 
-// Preguntar si el cliente está registrado
-
 const estaRegistrado = confirm('¿Ya está registrado como cliente? Click en cancelar si no lo esta!');
 
 
-// Si está registrado, pedir el nombre y buscarlo en el array
 if (estaRegistrado) {
   const nombre = prompt('Ingrese su nombre');
   
@@ -60,15 +54,14 @@ if (estaRegistrado) {
   
   if (clienteExistente) {
     
-    // Si el cliente ya está en el array, mostrar un mensaje de bienvenida
     alert(`Bienvenido/a de nuevo, ${clienteExistente.nombre}!`);
   } else {
-    // Si el cliente no está en el array, mostrar un mensaje de error
+
     alert('Lo siento, no pudimos encontrar su registro como cliente.');
   }
 } else {
   
-  // Si no está registrado, pedir los datos necesarios y agregarlos al array
+  
   const nombre = prompt('Ingrese su nombre');
   const email = prompt('Ingrese su correo electrónico');
   const telefono = prompt('Ingrese su número de teléfono');
@@ -97,9 +90,11 @@ function calcularPrecio() {
     return;
   }
 
-  const [ancho, alto] = medidas.split(',').map(Number);
+  
 
   const precioBase = rollerSeleccionado.precio * (ancho * alto) / 10000;
+  
+  const [ancho, alto] = medidas.split(',').map(Number);
 
   const metodoPago = prompt('Ingresa el método de pago (Efectivo, 1 cuota, 3 cuotas, 6 cuotas o 12 cuotas:\n\nEfectivo 20% de descuento\n 1 y 3 cuotas SIN INTERES!!.\n 6 cuotas 30% de Interes.\n 12 cuotas 50% de interes.');
 
