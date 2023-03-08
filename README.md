@@ -2,8 +2,7 @@
 ## Comisión 51475 - Joel Basualdo
 ### - Simulador interactivo
 
-![image](https://raw.githubusercontent.com/JoelJBG/Js---Funciones---Primer-entrega/main/img/Simulador.png
-)
+![image](https://raw.githubusercontent.com/JoelJBG/Js---Funciones---Primer-entrega/main/img/Simulador.png)
 
 ---
 
@@ -11,7 +10,7 @@
 
   Se trata de un programa que calcula el precio final de una cortina roller segun:
   
-  - Tipo (Black Out o Sun Screen).
+  - Tipo (Black Out, Sun Screen o DUO).
   
   - Las medidas que se pasan a metros cuadrados (alto * ancho).
   

@@ -13,20 +13,23 @@ h1{
     text-align: center;
 } 
 
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    margin-bottom: 20px;
+.container {
+    display: grid;
+    place-items: center
+}
 
+.button_funcion{
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
 }
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
+.button_funcion:hover {
+    background-color: #000;
+    color: #fff;
+  }
 
 .color1 {
     display: block;
@@ -40,33 +43,6 @@ label {
     cursor: pointer;
 }
 
-label {
-    background-color: white;
-}
-
-.resultado {
-    max-width: 80%;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 24px;
-    
-
-}
-
-.resultado {
-    display: none;
-}
-
-.espacio {
-    height: 30px;
-    position: relative;
-    min-height: 100%;
-}
 .textofooter {
     margin-top: 20px;
     text-align: center;
@@ -76,6 +52,8 @@ label {
     left: 0; 
     right: 0; 
 
+    position: fixed;
+    bottom: 0;
     background-color: rgba(5,7,12,0.90);
     color: white;
     font-family: 'Poppins', sans-serif;
