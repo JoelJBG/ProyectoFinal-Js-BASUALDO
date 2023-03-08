@@ -3,8 +3,8 @@
 ### - Simulador interactivo
 
 ![image](https://github.com/JoelJBG/Js---2daPreEntrega/blob/main/img/Segunda%20Entrega.jpg?raw=true)
-
-
+![image](https://raw.githubusercontent.com/JoelJBG/Js---2daPreEntrega/main/img/Segunda%20Entrega2.jpg)
+![image](https://raw.githubusercontent.com/JoelJBG/Js---2daPreEntrega/main/img/Segunda%20Entrega3.jpg)
 
 ---
 
