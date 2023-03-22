@@ -1,128 +1,71 @@
-  alert("Segunda ENTREGA - Simulador Presupuestos de Cortinas Black Out/Sun Screen");
-// MOSTRAR PRODUCTOS
-
-          const rollers = [
-            {
-              nombre: 'Blackout',
-              precio: 10000,
-              stock: true
-            },
-            {
-              nombre: 'SunScreen',
-              precio: 12000,
-              stock: true
-            },
-            {
-              nombre: 'Duo',
-              precio: 23000,
-              stock: false
-            }
-          ];
-
-
-            rollers.sort((a, b) => a.nombre.localeCompare(b.nombre));
-
-            let mensaje = '';
-            
-            for (let i = 0; i < rollers.length; i++) {
-             
-              mensaje += `${rollers[i].nombre}: $ ${rollers[i].precio} x m2, Stock: ${rollers[i].stock ? 'Sí' : 'No'}\n`;
-            }
-
-
-            alert("Bienvenido RollersJs !! \nAquí te mostramos los productos que vendemos en nuestra tienda. \nUsted podra calcular su costo segun sus medidas y el metodo de pago \n \nCortinas Rollers:\n" + mensaje);
-
-
-
-// REGISTRAR CLIENTE EN UN ARRAY
-
-const clientes = [
+const productos = [
   {
-    nombre: "Joel",
-    mail: "basualdojjoel@gmail.com",
-    telefono: "3467440763"
+    id: 1,
+    nombre: "blackout",
+    precio: 10000,
+  },
+  {
+    id: 2,
+    nombre: "sunscreen",
+    precio: 15000,
+  },
+  {
+    id: 3,
+    nombre: "duo",
+    precio: 18000,
   }
-];
-
-const estaRegistrado = confirm('¿Ya está registrado como cliente? Click en cancelar si no lo esta!');
+]
 
 
-if (estaRegistrado) {
-  const nombre = prompt('Ingrese su nombre');
+function calcularPrecioTotal() {
+    var ancho = parseFloat(document.getElementById("ancho").value);
+    var alto = parseFloat(document.getElementById("alto").value);
+    var tipo = document.getElementById("tipo").value;
+    var precioPorMetroCuadrado = 0;
+    var metrosCuadrados = 0;
+    var precioTotal = 0;
+    var descuento = 0;
+    var cuotas = 0;
+    var interes = 0;
   
-  const clienteExistente = clientes.find(cliente => cliente.nombre === nombre);
-  
-  if (clienteExistente) {
-    
-    alert(`Bienvenido/a de nuevo, ${clienteExistente.nombre}!`);
-  } else {
-
-    alert('Lo siento, no pudimos encontrar su registro como cliente.');
-  }
-} else {
-  
-  
-  const nombre = prompt('Ingrese su nombre');
-  const email = prompt('Ingrese su correo electrónico');
-  const telefono = prompt('Ingrese su número de teléfono');
-  const nuevoCliente = { nombre, email, telefono };
-  clientes.push(nuevoCliente);
-  alert(`¡Bienvenido/a, ${nombre}! Gracias por registrarse como cliente.`);
-}
-
-
-// PEDIR DATOS DE LA CORTINA A CALCULAR
-
-function calcularPrecio() {
-  const tipo = prompt('Ingresa el tipo de roller (Blackout, SunScreen o Duo):');
-  const medidas = prompt('Ingresa las medidas separadas por una coma (ancho, alto):');
-
-
-  const rollerSeleccionado = rollers.find(roller => roller.nombre === tipo);
-
-  if (!rollerSeleccionado) {
-    alert('No se encontró el roller seleccionado.');
-    return;
-  }
-
-  if (!rollerSeleccionado.stock) {
-    alert('El roller seleccionado no está en stock.');
-    return;
-  }
-
-  
-
-  const precioBase = rollerSeleccionado.precio * (ancho * alto) / 10000;
-  
-  const [ancho, alto] = medidas.split(',').map(Number);
-
-  const metodoPago = prompt('Ingresa el método de pago (Efectivo, 1 cuota, 3 cuotas, 6 cuotas o 12 cuotas:\n\nEfectivo 20% de descuento\n 1 y 3 cuotas SIN INTERES!!.\n 6 cuotas 30% de Interes.\n 12 cuotas 50% de interes.');
-
-  let precioFinal;
-
-  switch (metodoPago.toLowerCase()) {
-    case 'efectivo':
-      precioFinal = precioBase * 0.8;
-      break;
-    case '1 cuota':
-      precioFinal = precioBase;
-      break;
-    case '3 cuotas':
-      precioFinal = precioBase;
-      break;
-    case '6 cuotas':
-      precioFinal = precioBase * 1.3;
-      break;
-    case '12 cuotas':
-      precioFinal = precioBase * 1.5;
-      break;
-    default:
-      alert('El método de pago ingresado no es válido.');
+    // Tipo de cortina
+    if (tipo.toLowerCase() === "blackout") {
+      precioPorMetroCuadrado = 10000;
+    } else if (tipo.toLowerCase() === "sunscreen") {
+      precioPorMetroCuadrado = 15000;
+    } else if (tipo.toLowerCase() === "duo") {
+        precioPorMetroCuadrado = 18000;}
+    else {
+      document.getElementById("resultado1").innerHTML = "Tipo de cortina inválido. Por favor, seleccione Black out o Sun screen.";
       return;
-  }
+    }
+  
+    metrosCuadrados = (alto / 100) * (ancho / 100);
+  
+    precioTotal = metrosCuadrados * precioPorMetroCuadrado;
+  
+    // Método de pago    
+    var metodoPago = document.getElementById("metodoPago").value;
+    if (metodoPago.toLowerCase() === "efectivo") {
+      descuento = precioTotal * 0.1;
+      precioTotal = precioTotal - descuento;
+      document.getElementById("resultado1").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2) + "<br>DESCUENTO: $" + descuento.toFixed(2);
+    } else if (metodoPago === "1" || metodoPago === "3") {
+      descuento = 0;
+      document.getElementById("resultado1").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2);
+    } else if (metodoPago === "6") {
+      interes = precioTotal * 0.15;
+      precioTotal = precioTotal + interes;
+      document.getElementById("resultado1").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2) + "<br>Intereses: $" + interes.toFixed(2);
+    } else if (metodoPago === "12") {
+      interes = precioTotal * 0.28;
+      precioTotal = precioTotal + interes;
+      document.getElementById("resultado1").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2) + "<br>Intereses: $" + interes.toFixed(2);
+    } else {
+      document.getElementById("resultado1").innerHTML = "Método de pago inválido. Por favor, seleccione Efectivo, 1, 3, 6 o 12 cuotas.";
+      
+    }
+    document.getElementById("resultado1").style.display = "block";
+} 
 
-  alert(`El precio final del roller ${tipo} es de $${precioFinal.toFixed(2)}.`);
-}
-
-calcularPrecio();
 
