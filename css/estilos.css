@@ -164,3 +164,149 @@ h1{
   .resultado {
       display: none;
   }
+
+  .boton-agregar {
+  display: block;
+  margin: 0 auto;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  padding: 12px 17px;
+  border-radius: 50px;
+  background-color: #2222220d;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  
+}
+.boton-agregar:hover {
+  background-color: #0000001a;
+}
+
+.carrito1{
+ margin-bottom: 100px;
+}
+
+.imgcarrito{
+  width: 30px;
+  height: 30px;
+}
+
+#btn-carrito {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#carrito-desplegable {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: right 0.3s ease;
+  overflow-y: scroll;
+}
+
+#carrito-desplegable h2 {
+  margin: 20px;
+  background-color: white;
+}
+
+#carrito-lista {
+  background-color: whitesmoke;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#carrito-lista li {
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: #b6bdc4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.boton-eliminar {
+
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #ff4742;
+  color: #fff;
+  background-color: #ff4742;
+  padding: 2px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+  font-weight: 200;
+  font-size: 15px;
+  height: 30px;
+}
+.boton-eliminar:hover{
+      background: 0 0;
+      color: #ff4742;
+  }
+
+.cerrarboton {
+
+  margin: 4px;  
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #ff4742;
+  color: #fff;
+  background-color: #ff4742;
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+  font-weight: 800;
+  font-size: 16px;
+  height: 42px;
+  
+}
+
+.cerrarboton:hover{
+  background: 0 0;
+  color: #ff4742;
+}
+
+#btn-finalizar-compra {
+  margin: 4px;  
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #ff4742;
+  color: #fff;
+  background-color: #ff4742;
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+  font-weight: 100;
+  font-size: 12px;
+  height: 55px;
+  display: inline-block;
+  margin-top: 10px;  /* Agregamos un margen superior para separar el botón de la lista de productos */
+  position: absolute;  /* Posicionamos el botón de manera absoluta dentro del menú desplegable */
+  bottom: 10px;  /* Lo ubicamos en la parte inferior */
+  left: 50%;  /* Lo centramos horizontalmente */
+  transform: translateX(-50%);  /* Lo desplazamos hacia la izquierda en un 50% de su ancho */
+}
+
+#btn-finalizar-compra:hover{
+  background: 0 0;
+  color: #ff4742;
+
+}

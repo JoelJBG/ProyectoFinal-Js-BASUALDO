@@ -49,7 +49,8 @@ function calcularPrecioTotal() {
     if (metodoPago.toLowerCase() === "efectivo") {
       descuento = precioTotal * 0.1;
       precioTotal = precioTotal - descuento;
-      document.getElementById("resultado1").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2) + "<br>DESCUENTO: $" + descuento.toFixed(2);
+      document.getElementById("resultado1").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2) + "<br>DESCUENTO: $" + descuento.toFixed(2)+"<br><br>";
+
     } else if (metodoPago === "1" || metodoPago === "3") {
       descuento = 0;
       document.getElementById("resultado1").innerHTML = "Precio Final es de: $" + precioTotal.toFixed(2);
@@ -66,6 +67,97 @@ function calcularPrecioTotal() {
       
     }
     document.getElementById("resultado1").style.display = "block";
-} 
 
+  var botonAgregar = document.createElement("button");
+  botonAgregar.innerHTML = "Agregar al carrito";
+  botonAgregar.className = "boton-agregar"; 
+
+
+  var resultado1 = document.getElementById("resultado1");
+  resultado1.appendChild(botonAgregar);
+
+
+  botonAgregar.onclick = function() {
+
+  agregarAlCarrito(precioTotal);
+  }}
+
+
+
+var carrito = [];
+
+
+function agregarAlCarrito(precio) {
+  carrito.push(precio);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  mostrarCarrito();
+}
+
+function mostrarOcultarCarrito() {
+  var carritoDesplegable = document.getElementById("carrito-desplegable");
+  if (carritoDesplegable.style.right === "-320px") {
+    mostrarCarrito();
+    carritoDesplegable.style.right = "0";
+  } else {
+    carritoDesplegable.style.right = "-320px";
+  }
+}
+
+function mostrarCarrito() {
+  var carritoHTML = "";
+  var carritoGuardado = localStorage.getItem("carrito");
+  if (carritoGuardado) {
+    carrito = JSON.parse(carritoGuardado);
+  }
+  for (var i = 0; i < carrito.length; i++) {
+    carritoHTML += "<li>Precio Cortina " + ": $" + carrito[i].toFixed(2) + " <button class='boton-eliminar' onclick='eliminarDelCarrito(" + i + ")'>Eliminar</button></li>";
+  }
+  var carritoLista = document.getElementById("carrito-lista");
+  carritoLista.innerHTML = carritoHTML;}
+  
+  document.getElementById("btn-cerrar-carrito").addEventListener("click", function() {
+  document.getElementById("carrito-desplegable").style.right = "-320px";
+  
+});
+
+function eliminarDelCarrito(index) {
+  var carritoGuardado = localStorage.getItem("carrito");
+  if (carritoGuardado) {
+    carrito = JSON.parse(carritoGuardado);
+  }
+  carrito.splice(index, 1);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  mostrarCarrito();
+}
+
+  document.getElementById("btn-agregar-carrito").addEventListener("click", function() {
+  
+  var precio = parseFloat(document.getElementById("precio").value);
+  var carritoGuardado = localStorage.getItem("carrito");
+  if (carritoGuardado) {
+    carrito = JSON.parse(carritoGuardado);
+  } else {
+    carrito = [];
+  }
+  carrito.push(precio);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+});
+
+  // Seleccionamos el botón de finalizar compra y le agregamos un evento click
+  document.getElementById("btn-finalizar-compra").addEventListener("click", function() {
+    // Aquí puedes agregar la lógica necesaria para finalizar la compra
+    // Por ejemplo, redirigir al usuario a una página de confirmación o realizar una llamada a una API para procesar el pago
+    
+    // Después de finalizar la compra, puedes limpiar el carrito y ocultar el menú desplegable
+    localStorage.clear(); // Limpia el carrito almacenado en localStorage
+    actualizarCarrito(); // Actualiza la vista del carrito
+    document.getElementById("carrito-desplegable").style.right = "-320px"; // Oculta el menú desplegable
+  });
+
+
+
+
+
+mostrarCarrito();
 
