@@ -2,10 +2,10 @@
 ## Comisión 51475 - Joel Basualdo
 ### - Simulador interactivo
 
-![image](https://raw.githubusercontent.com/JoelJBG/JS-3raPreEntrega/main/img/Tercera%20Entrega.jpg)
-![image](https://raw.githubusercontent.com/JoelJBG/JS-3raPreEntrega/main/img/Tercera%20Entrega%202.jpg)
-![image](https://raw.githubusercontent.com/JoelJBG/JS-3raPreEntrega/main/img/Tercera%20Entrega%203.jpg)
-
+![image](https://raw.githubusercontent.com/JoelJBG/ProyectoFinal-Js-BASUALDO/main/img/Proyecto%20Final%201.png)
+![image](https://raw.githubusercontent.com/JoelJBG/ProyectoFinal-Js-BASUALDO/main/img/Proyecto%20Final%202.png)
+![image](https://raw.githubusercontent.com/JoelJBG/ProyectoFinal-Js-BASUALDO/main/img/Proyecto%20Final%203.png)
+![image](https://raw.githubusercontent.com/JoelJBG/ProyectoFinal-Js-BASUALDO/main/img/Proyecto%20Final%204.png)
 ---
 
 ### **Descripción**
