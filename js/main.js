@@ -15,6 +15,7 @@ const productos = [
     precio: 18000,
   }
 ]
+.concat
 
 
 function calcularPrecioTotal() {
@@ -143,16 +144,12 @@ function eliminarDelCarrito(index) {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 
 });
-
-  // Seleccionamos el botón de finalizar compra y le agregamos un evento click
   document.getElementById("btn-finalizar-compra").addEventListener("click", function() {
-    // Aquí puedes agregar la lógica necesaria para finalizar la compra
-    // Por ejemplo, redirigir al usuario a una página de confirmación o realizar una llamada a una API para procesar el pago
     
-    // Después de finalizar la compra, puedes limpiar el carrito y ocultar el menú desplegable
-    localStorage.clear(); // Limpia el carrito almacenado en localStorage
-    actualizarCarrito(); // Actualiza la vista del carrito
-    document.getElementById("carrito-desplegable").style.right = "-320px"; // Oculta el menú desplegable
+    
+    localStorage.clear();
+    actualizarCarrito();
+    document.getElementById("carrito-desplegable").style.right = "-320px";
   });
 
 

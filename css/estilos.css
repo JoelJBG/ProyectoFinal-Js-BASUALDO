@@ -9,7 +9,7 @@
 h1{ 
     color: #000000;
     margin: 30px;
-    background-color: rgb(235, 228, 220);
+    background-color: rgb(235, 228, 221);
     text-align: center;
 } 
 
@@ -298,11 +298,11 @@ h1{
   font-size: 12px;
   height: 55px;
   display: inline-block;
-  margin-top: 10px;  /* Agregamos un margen superior para separar el botón de la lista de productos */
-  position: absolute;  /* Posicionamos el botón de manera absoluta dentro del menú desplegable */
-  bottom: 10px;  /* Lo ubicamos en la parte inferior */
-  left: 50%;  /* Lo centramos horizontalmente */
-  transform: translateX(-50%);  /* Lo desplazamos hacia la izquierda en un 50% de su ancho */
+  margin-top: 10px;
+  position: absolute;  
+  bottom: 10px;  
+  left: 50%;  
+  transform: translateX(-50%);  
 }
 
 #btn-finalizar-compra:hover{
