@@ -19,3 +19,4 @@
   - El metodo de pago elegido. ( Efectivo con 20% de descuento - 1 y 3 Cuotas sin Intereses - 6 y 12 Cuotas con Intereeses).
 
   - Ademas del registro de clientes mediante un array. (Ya esta registrado un cliente con mi nombre Joel).
+# ProyectoFinal-Js-BASUALDO
