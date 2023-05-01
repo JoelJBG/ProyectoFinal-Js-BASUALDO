@@ -3,10 +3,20 @@
     padding: 0;
     box-sizing: border-box; 
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(207, 207, 206);
 }
 
-h1{ 
+
+
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+
+
+
+
+
+.tittle{ 
     color: #000000;
     margin: 30px;
     background-color: rgb(235, 228, 221);
@@ -101,6 +111,48 @@ h1{
     background-color: whitesmoke;
 
   }
+
+  .product-container1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    grid-gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  
+  .product-box2 {
+    background-color: whitesmoke;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .product-box img2 {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    margin: 0 auto;
+
+  }
+  
+  .product-box2 h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: whitesmoke;
+
+  }
+  
+  .product-box2 p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    background-color: whitesmoke;
+
+  }
+
+  
   
   form button {
 
@@ -174,8 +226,8 @@ h1{
   height: 50px;
   padding: 12px 17px;
   border-radius: 50px;
-  background-color: #2222220d;
-  color: #000000;
+  background-color: #a541410d;
+  color: #161515;
   font-size: 16px;
   font-weight: 500;
   
@@ -309,4 +361,47 @@ h1{
   background: 0 0;
   color: #ff4742;
 
+}
+
+.formFin {
+      max-width: 500px;
+			margin: 0px auto;
+      margin-bottom: 100px;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-form-finalizar-compra{
+  margin: 4px;  
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #ff4742;
+  color: #fff;
+  background-color: #ff4742;
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+  font-weight: 100;
+  font-size: 12px;
+  height: 55px;
+}
+
+.btn-form-finalizar-compra:hover{
+  background: 0 0;
+  color: #ff4742;
+
+}
+
+.labelclass {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border-radius: 5px;
+border: none;
+background-color: #f2f2f2;
+color: #333;
+font-size: 16px;
 }

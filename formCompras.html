@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+<title>Simulador Primera Entrega</title>
+</head>
+
+<body>
+    <h1 class="tittle">Simulador Presupuestos y Compras de Cortinas Black Out/Sun Screen/Duo</h1>
+
+    <form class="formFin">
+      <label for="nombre">Nombre:</label>
+      <input class="labelclass" type="text" id="nombre" name="nombre" value="NN" required>
+      
+      <label for="apellido">Apellido:</label>
+      <input class="labelclass" type="text" id="apellido" name="apellido" value="NN" required>
+      
+      <label for="email">Email:</label>
+      <input  class="labelclass" type="email" id="email" name="email" value="NN@NN.COM" required>
+      
+      <label for="telefono">Teléfono:</label>
+      <input class="labelclass" type="tel" id="telefono" name="telefono" value="NN" required>
+
+      <label for="direccion">Dirección:</label>
+      <input class="labelclass" type="adress" id="adress" name="adress" value="NN" required>
+
+      
+      <input type="submit" id="btn-confirmar-compra" class="btn-form-finalizar-compra" value="Confirmar Compra">
+    </form>
+    
+
+    <div class="resultado" id="resultado1">
+      <button id="boton" type="button" onclick="agregarCarrito()">Agregar al carrito</button>
+     </div>
+
+
+     <button id="btn-carrito" onclick="mostrarOcultarCarrito()"><img class="imgcarrito"src="img/carrito-de-compras.png" alt="carrito"></button>
+
+      <div id="carrito-desplegable">
+      <button class="cerrarboton" id="btn-cerrar-carrito">X</button>
+
+      <h2 class="cart">Carrito de Compras</h2>
+      
+      <ul id="carrito-lista"></ul>
+
+      <button id="btn-finalizar-compra" class="boton-compra" onclick="mostrarOcultarCarrito()">Finalizar compra</button>
+      
+    </div>
+
+
+	<p class="textofooter">Coderhouse - Curso Javascript - Comisión 51475 - Joel Basualdo </p>
+
+	  <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
